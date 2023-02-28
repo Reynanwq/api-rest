@@ -1,4 +1,4 @@
-// configuracao da base de dados: usuario, snha, host
+// configuracao da base de dados: usuario, senha, host
 
 module.exports = {
   dialect: 'mysql',
@@ -8,14 +8,14 @@ module.exports = {
   password: process.env.DATABASE_PASSWORD,
   database: process.env.DATABASE,
   define: {
-    timesstamps: true,
+    timestamps: true,
     underscored: true,
     underscoreALL: true,
-    createAt: 'created_at',
-    updateAt: 'update_at',
+    createdAt: 'created_at',
+    updatedAt: 'updated_at',
   },
   dialectOptions: {
-    timezone: 'America/Bahia',
+    timezone: 'local',
   },
-  timezone: 'America/Bahia',
+  timezone: 'local',
 };
